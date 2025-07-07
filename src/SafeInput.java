@@ -111,3 +111,5 @@ public class SafeInput {
         System.out.println("*".repeat(WIDTH));
     }
 }
+
+

@@ -1,10 +1,15 @@
-import java.util.Scanner;
-
-class TestGetRegExString {
+class CtoFTableDisplay {
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        String ssn = SafeInput.getRegExString(in, "Enter SSN (###-##-####)", "^\\d{3}-\\d{2}-\\d{4}$");
-        System.out.println("You entered SSN: " + ssn);
-        in.close();
+        System.out.printf("%-10s | %-10s\n", "Celsius", "Fahrenheit");
+        System.out.println("--------------------------");
+
+        for (int c = -100; c <= 100; c++) {
+            double f = CtoF(c);
+            System.out.printf("%-10d | %-10.2f\n", c, f);
+        }
+    }
+
+    public static double CtoF(double celsius) {
+        return (celsius * 9 / 5) + 32;
     }
 }
